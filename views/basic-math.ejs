@@ -1,17 +1,28 @@
-<!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Math</title>
-</head>
-<body>
-    <%- include("./partials/header.ejs") %>
-    
-    <div id="calculator">
-        <input id="display" readonly>
+<%- include("./partials/header.ejs") %>
+<link href="/styles/basic-math.css" rel="stylesheet">
+    <div id="calculator-container">
+        <div id="calculator">
+            <input id="display" readonly>
+            <div id="keys">
+                <button onclick="echoToDisplay('+')" class="operator-btn">+</button>
+                <button onclick="echoToDisplay('7')">7</button>
+                <button onclick="echoToDisplay('8')">8</button>
+                <button onclick="echoToDisplay('9')">9</button>
+                <button onclick="echoToDisplay('-')" class="operator-btn">-</button>
+                <button onclick="echoToDisplay('4')">4</button>
+                <button onclick="echoToDisplay('5')">5</button>
+                <button onclick="echoToDisplay('6')">6</button>
+                <button onclick="echoToDisplay('*')" class="operator-btn">*</button>
+                <button onclick="echoToDisplay('1')">1</button>
+                <button onclick="echoToDisplay('2')">2</button>
+                <button onclick="echoToDisplay('3')">3</button>
+                <button onclick="echoToDisplay('/')" class="operator-btn">/</button>
+                <button onclick="echoToDisplay('0')">0</button>
+                <button onclick="echoToDisplay('.')">.</button>
+                <button onclick="calculate()" class="operator-btn">=</button>
+                <button onclick="clearDisplay()" class="operator-btn">C</button>
+            </div>
+        </div>
     </div>
 
-    <%- include("./partials/footer.ejs") %>
-</body>
-</html>
+<%- include("./partials/footer.ejs") %>
