@@ -1,28 +1,30 @@
 #calculator-container {
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
-    height: 18vh;
-    margin-top: 30vh;
-    margin-bottom: 30vh;
+    margin-bottom: 500px;
 }
 
 #calculator {
     font-family: Arial, sans-serif;
     background-color: hsl(0, 0, 30%);
     border-radius: 5%;
+    max-height: 35vh;
     max-width: 500px;
     transform: scale(0.7);
+    padding: 20px;
 }
 
 #display {
     width: 100%;
     padding: 5%;
-    font-size: 5rem;
-    text-align: left;
+    font-size: 4rem;
+    text-align: right;
     border: none;
     background-color: hsl(0, 0, 20%);
     border-radius: 4%;
+    color: white;
 }
 
 #keys {
@@ -30,6 +32,13 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2%;
     padding: 3%;
+}
+
+footer {
+    padding: 10px;
+    flex-shrink: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button {

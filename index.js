@@ -1,11 +1,15 @@
 import express from "express";
 import bodyParser from "body-parser";
+import path from 'path';
+import { fileURLToPath } from 'url';
 
 const app = express();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const port = 3000;
 
-app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: true }));
+// Serve static files from the root directory
+app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
   res.render("index.ejs");
