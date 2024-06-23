@@ -8,7 +8,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const port = 3000;
 
-// Serve static files from the root directory
 app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
