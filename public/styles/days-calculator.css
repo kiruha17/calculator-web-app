@@ -1,0 +1,29 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#date {
+    height: 7vh;
+}
+
+.output {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 20%;
+    padding-right: 20%;
+    text-align: center;
+}
+
+.calculator-container {
+    margin-top: 25vh;
+    margin-bottom: 25vh;
+}

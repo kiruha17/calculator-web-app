@@ -1,12 +1,14 @@
 <%- include("./partials/header.ejs") %>
 <link href="/public/styles/days-calculator.css" rel="stylesheet">
 
-    <form class="select-date">
-        <label for="date"><h1>Choose a date:</h1></label>
-        <input type="date" id="date" name="date">
-    </form>
+    <div class="calculator-container">
+        <form class="select-date">
+            <label for="date"><h1>Choose a date:</h1></label>
+            <input type="date" id="date" name="date">
+        </form>
 
-    <h1 class="output"></h1>
+        <h1 class="output"></h1>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../days-calculator.js"></script>
