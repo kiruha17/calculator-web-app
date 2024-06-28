@@ -1,5 +1,31 @@
 <%- include("./partials/header.ejs") %>
+<link href="/public/styles/financial-interest-calculator.css" rel="stylesheet">
 
-    <h1 style="text-align: center;">Coming Soon</h1>
+  <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Financial Interest Calculator</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">Enter your amount of interest, starting amount, and end date:</p>
+      </div>
+      <div class="form col-lg-6 mx-auto">
+        <form class="select-date">
+            <select name="pets" id="pet-select">
+                <option value="">--Please choose the type of interest--</option>
+                <option value="simple">Simple</option>
+                <option value="compound">Compound</option>
+            </select>
+            <br>
+            <label for="interest">Interest %:</label>
+            <input type="number" id="interest" min="0" max="100">
+            <label for="amount">Starting Amount:</label>
+            <input type="number" id="amount" min="0">
+            <label for="date">End Date:</label>
+            <input type="date" id="date" name="date">
+        </form>
+      </div>
+        <h1 class="text-white output"></h1>
+        <h3 class="text-white error-message"></h3>
+    </div>
+  </div>
     
 <%- include("./partials/footer.ejs") %>

@@ -1,0 +1,11 @@
+.select-date {
+    margin-bottom: 10vh;
+}
+
+form label {
+    margin: 0.2rem;
+}
+
+form select {
+    margin: 1rem;
+}
