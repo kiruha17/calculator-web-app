@@ -1,19 +1,20 @@
-$('#interest-select').on('change', function() {
-    let interestType = $(this).val();
+$("#calculate-button").on("click", function() {
+    let interestType = $("#interest-select").val();
+    let interestDuration = $("#interest-duration").val();
+    let interest = $("#interest").val();
+    let amount = $("#amount").val();
+    let date = $("#date").val();
+    let endDate = new Date(date);
+
     console.log("Interest Type: " + interestType);
-});
-
-$('#interest').on('input', function() {
-    let interest = $(this).val();
     console.log("Interest: " + interest);
-});
-
-$('#amount').on('input', function() {
-    let amount = $(this).val();
     console.log("Starting Amount: " + amount);
+    console.log("End Date: " + endDate);
+
+    let result = calculateInterest(interestType, interest, amount, endDate);
+    $(".output").text("Calculated Result: " + result);
 });
 
-$('#date').on('change', function() {
-    let endDate = $(this).val();
-    console.log("End Date: " + endDate);
-});
+function calculateInterest(interestType, interest, amount, endDate) {
+    let currentDate = new Date();
+}
