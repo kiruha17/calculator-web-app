@@ -9,7 +9,7 @@
       </div>
       <div class="form col-lg-6 mx-auto">
         <form class="select-date">
-            <select name="pets" id="pet-select">
+            <select name="interests" id="interest-select">
                 <option value="">--Please choose the type of interest--</option>
                 <option value="simple">Simple</option>
                 <option value="compound">Compound</option>
@@ -21,6 +21,8 @@
             <input type="number" id="amount" min="0">
             <label for="date">End Date:</label>
             <input type="date" id="date" name="date">
+            <br>
+            <button type="button" class="btn btn-secondary" id="calculate-button">Calculate</button>
         </form>
       </div>
         <h1 class="text-white output"></h1>
@@ -28,4 +30,5 @@
     </div>
   </div>
     
+<script src="/financial-interest-calculator.js"></script>
 <%- include("./partials/footer.ejs") %>
