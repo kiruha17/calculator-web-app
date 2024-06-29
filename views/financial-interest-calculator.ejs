@@ -5,10 +5,10 @@
     <div class="py-5">
       <h1 class="display-5 fw-bold text-white">Financial Interest Calculator</h1>
       <div class="col-lg-6 mx-auto">
-        <p class="fs-5 mb-4">Enter your amount of interest, starting amount, and end date:</p>
+        <p class="fs-5 mb-4">Enter some essential information:</p>
       </div>
-      <div class="form col-lg-6 mx-auto">
-        <form class="select-date">
+      <div class="form col-md-8 col-sm-10 mx-auto form-container">
+        <form class="input-form">
             <select name="interests" id="interest-select">
                 <option value="">--Please choose the type of interest--</option>
                 <option value="simple">Simple</option>
@@ -16,16 +16,19 @@
             </select>
             <select name="duration" id="interest-duration">
                 <option value="">--Please choose the duration of interest--</option>
-                <option value="simple">Monthly</option>
-                <option value="compound">Annual</option>
+                <option value="monthly">Monthly</option>
+                <option value="annual">Annual</option>
             </select>
             <br>
             <label for="interest">Interest %:</label>
             <input type="number" id="interest" min="0" max="100">
             <label for="amount">Starting Amount:</label>
             <input type="number" id="amount" min="0">
-            <label for="date">End Date:</label>
-            <input type="date" id="date" name="date">
+            <br>
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" name="start-date">
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" name="end-date">
             <br>
             <button type="button" class="btn btn-secondary" id="calculate-button">Calculate</button>
         </form>
@@ -35,5 +38,6 @@
     </div>
   </div>
     
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="/financial-interest-calculator.js"></script>
 <%- include("./partials/footer.ejs") %>
